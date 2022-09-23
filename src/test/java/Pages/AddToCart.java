@@ -22,13 +22,12 @@ public class AddToCart{
     By backToHome = By.xpath("//button[@name='back-to-products']");
 
     public AddToCart(WebDriver driver)
-     {
+    {
         this.driver = driver;
         wait = new WebDriverWait(driver, 4);
-     }
-
-     public void addToCart()
-     {
+    }
+    public void addToCart()
+    {
 
         driver.findElement(selectItem) .click();
         driver.findElement( addToCartItem).click();
@@ -44,7 +43,3 @@ public class AddToCart{
         driver.findElement(backToHome).click();
     }
 }
-
-
-
-

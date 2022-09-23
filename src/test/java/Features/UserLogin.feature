@@ -6,5 +6,3 @@ Feature: Adding item to Cart
     Then   user should add the item to Cart and Checkout
     When   user click on Logout
     Then   user is on Homepage
-
-

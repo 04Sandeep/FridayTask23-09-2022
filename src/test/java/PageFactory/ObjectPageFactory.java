@@ -45,3 +45,4 @@ public class ObjectPageFactory {
         return logout;
     }
 }
+
