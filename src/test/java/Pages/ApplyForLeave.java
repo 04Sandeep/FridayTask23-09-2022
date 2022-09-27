@@ -1,0 +1,32 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class ApplyForLeave {
+
+    WebDriver driver;
+
+    By leave = By.xpath("//a[@href='/web/index.php/leave/viewLeaveModule']");
+    By applyforleave = By.xpath("//a[text()='Apply']");
+    By leavetype = By.xpath("//div[@class='oxd-select-text--after']");
+    By leavefromdate = By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]");
+    By addingcomment = By.xpath("//textarea[@class ='oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical']");
+    By applyonleave = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']");
+
+    public ApplyForLeave(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void applyForLeave() {
+
+        driver.findElement(leave).click();
+        driver.findElement(applyforleave).click();
+        driver.findElement(leavetype).click();
+        driver.findElement(By.xpath("//*[contains(text(),'CAN - Bereavement')]")).click();
+        driver.findElement(leavefromdate).sendKeys("2022-09-08");
+        driver.findElement(addingcomment).sendKeys("Apply leave");
+        driver.findElement(applyonleave).click();
+    }
+}
