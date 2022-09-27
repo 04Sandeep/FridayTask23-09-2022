@@ -1,8 +1,8 @@
-Feature: Adding item to Cart
+Feature: Applying for leave
 
-  Scenario: Adding any selected item to the cart and go for checkout
+  Scenario: User applying for leave and then logout
+    Given navigate to Orange HRM website
+    When user is on Login Page and enter the Valid Credentials and verify
+    Then user will apply for leave
+    And user will log out
 
-    Given  User is on Login Page and enter the Valid Credentials
-    Then   user should add the item to Cart and Checkout
-    When   user click on Logout
-    Then   user is on Homepage
